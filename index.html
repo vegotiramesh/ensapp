@@ -45,18 +45,20 @@
                 let password = document.getElementById('password').value
 
                 console.log(email, password)
-                let studentArray = JSON.parse(localStorage.students)
+                if (localStorage.students) {
+                    let studentArray = JSON.parse(localStorage.students)
+              
+                    for (let i = 0; i < studentArray.length; i++) {
+                        if (email === studentArray[i].email && password === studentArray[i].password) {
+                            if (studentArray[i].role === 'admin') {
+                                window.location.href = 'adminaccount.html'
+                            } else {
+                                window.location.href = 'user.html'
+                            }
 
-                for (let i = 0; i < studentArray.length; i++) {
-                    if (email === studentArray[i].email && password === studentArray[i].password) {
-                        if (studentArray[i].role === 'admin') {
-                            window.location.href = 'adminaccount.html'
                         } else {
-                            window.location.href = 'user.html'
+                            document.getElementById('message').innerText = "Incorrect login credentials...."
                         }
-
-                    } else {
-                        document.getElementById('message').innerText = "Incorrect login credentials...."
                     }
                 }
 
