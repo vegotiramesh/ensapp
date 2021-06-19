@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    /* background : url(https://i.ytimg.com/vi/vm5mThhCAwQ/maxresdefault.jpg) no-repeat top/cover; */
+    background: url(https://upload.wikimedia.org/wikipedia/commons/1/1d/Sri_Vishnu_Educational_Society-entrance-1_%282%29.jpg) no-repeat 60% 35% /cover;
+}
+
+#overlay {
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: black;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top:65%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.7;
+    z-index: 10;
+}
+
+#logoDiv, #loginDiv {
+    width: 50%;
+    border: 1px solid rgba(243, 240, 240, 0.5);
+    background-color:black;
+    
+}
+
+#logoDiv {
+    text-align: center;
+}
+
+#loginDiv img {
+    width: 100%;
+}
+
+#logoDiv h1{
+    font-size: 50px;
+    color:white;
+}
+
+#logoDiv p {
+    font-size: 20px;
+    color: white;
+}
+
+#loginDiv {
+    padding: 50px 100px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 5px 15px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+#message {
+    color: white;
+    font-size: 20px;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+}
+
+p a {
+    color: green;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Registratin Page */
+
+.regDiv {
+    width: 40%;
+    padding: 25px;
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    opacity: 0.8;
+}
+
+#regForm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: left;
+    text-align:center;    
+}
+#regForm div {
+    width: 40%;
+    text-align: left;
+}
+
+#branch, #role {
+    width: 100%;
+    height: 40px;
+}
+
+button#register {
+    padding: 10px 20px; 
+    width: 200px;
+    text-align:center;
+}
+
+#backBtn {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    float:right;
+}
+

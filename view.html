@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <style>
+        body {
+            background: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) no-repeat top/cover
+        }
+
+        .container {
+            width: 60%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        table,
+        thead,
+        th,
+        td,
+        tr {
+            border: 1px solid white;
+        }
+
+        thead {
+            background-color: royalblue;
+            color: white;
+
+        }
+
+        td {
+            width: 200px;
+            padding: 8px;
+            font-size: 20px;
+        }
+
+        #backBtn {
+            padding-top: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            float: right;
+
+        }
+
+    </style>
+
+    <body>
+        <div class="container">
+            <a href="login.html" id="backBtn">Back</a>
+            <h1>Student Profile</h1>
+            <table>
+                <thead>
+
+                    <tr>
+                        <td>Name</td>
+                        <td>RegdNo.</td>
+                        <td>Branch</td>
+                        <td>Email</td>
+                        <td>Phone No</td>
+                        <td>Club</td>
+                        <td>Role</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <script>
+            let studentArray = 0;
+            studentArray = JSON.parse(localStorage.students)
+            console.log(studentArray)
+            let output = '';
+            for (let i = 0; i < studentArray.length; i++) {
+                output = output + `
+                <tr>
+                    <td>${studentArray[i].name}</td>
+                    <td>${studentArray[i].regdno}</td>
+                    <td>${studentArray[i].branch}</td>
+                    <td>${studentArray[i].email}</td>
+                    <td>${studentArray[i].phoneno}</td>
+                    <td>${studentArray[i].club}</td>
+                    <td>${studentArray[i].role}</td>
+                </tr>`
+            }
+            document.getElementById('tbody').innerHTML = output;
+
+        </script>
+    </body>
+
+</html>

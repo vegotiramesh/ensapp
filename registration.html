@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="regDiv">
+            <a href="login.html" id="backBtn">Back</a>
+            <h1>Registration Form</h1>
+
+            <form role="form" id="regForm">
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name..." required>
+                </div>
+
+                <div>
+                    <label>Regd No</label>
+                    <input type="number" name="regdno" id="regdno" placeholder="Enter Regd No..." required>
+                </div>
+                <div>
+                    <label for="branch">Choose Branch:</label>
+                    <select name="branch" id="branch">
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email..." required>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password..." required>
+                </div>
+                <div>
+                    <label>Phone Number</label>
+                    <input type="text" name="phoneno" id="phoneno" placeholder="Enter phoneno..." required>
+                </div>
+                <div>
+                    <label>Club</label>
+                    <input type="text" name="club" id="club" placeholder="Enter Club..." required>
+                </div>
+                <div>
+                    <label>Role</label>
+                    <select name="role" id="role">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit" id="register">Register</button>
+
+            </form>
+        </div>
+
+        <script type="text/javascript">
+
+
+            let regForm = document.getElementById('regForm')
+            regForm.addEventListener('submit', function (e) {
+
+                e.preventDefault()
+
+                let studentsArray = []
+                if (localStorage.students) {
+                    studentsArray = JSON.parse(localStorage.students)
+                }
+
+                let name = document.getElementById('name').value;
+                let regdno = document.getElementById('regdno').value;
+                let branch = document.getElementById('branch').value;
+                let email = document.getElementById('email').value;
+                let password = document.getElementById('password').value;
+                let phoneno = document.getElementById('phoneno').value;
+                let club = document.getElementById('club').value;
+                let role = document.getElementById('role').value;
+
+                let student = {
+                    name: name,
+                    regdno: regdno,
+                    branch: branch,
+                    email: email,
+                    password: password,
+                    regdno: regdno,
+                    phoneno: phoneno,
+                    club: club,
+                    role: role
+                }
+                studentsArray.push(student)
+                localStorage.students = JSON.stringify(studentsArray)
+                //localStorage.save()
+
+
+                console.log(studentsArray)
+                document.getElementById('name').value = ''
+                document.getElementById('regdno').value = ''
+                document.getElementById('branch').value = ''
+                document.getElementById('email').value = ''
+                document.getElementById('password').value = ''
+                document.getElementById('phoneno').value = ''
+                document.getElementById('club').value = ''
+                document.getElementById('role').value = ''
+
+                window.location.href = 'login.html'
+            })
+
+
+        </script>
+
+    </body>
+
+</html>

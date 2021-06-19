@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meeting Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <style>
+        #meetingForm {
+            width: 30%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: traslate(-50%, -50%);
+            opacity: 0.7;
+        }
+
+    </style>
+
+    <body>
+        <div>
+
+            <form role="form" id="meetingForm">
+                <h1>Crete a meeting</h1>
+                <div id="message"></div>
+                <label>Date</label><br>
+                <input type="date" name="date" id="date" required><br>
+                <label>Time</label><br>
+                <input type="time" name="time" id="time" required><br>
+                <br>
+                <button type="reset" id="register">Reset</button>
+                <button type="submit" id="register">Set</button>
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background : url(https://i.ytimg.com/vi/vm5mThhCAwQ/maxresdefault.jpg) no-repeat top/cover; */
+            background: url(https://upload.wikimedia.org/wikipedia/commons/1/1d/Sri_Vishnu_Educational_Society-entrance-1_%282%29.jpg) no-repeat 60% 35% /cover;
+        }
+
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            width: 40%;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .mainDiv {
+            display: flex;
+            flex-direction: row;
+            column-gap: 50px;
+            justify-content: center;
+        }
+
+        .meeting {
+            display: flex;
+            align-self: center;
+        }
+
+        div a {
+            display: block;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: green;
+            width: 180px;
+            color: white;
+            text-align: center;
+
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+    </style>
+
+    <body>
+        <div class="container">
+            <h1>User Account Page</h1>
+            <div class="mainDiv">
+                <div>
+                    <a href="view.html">View Profile</a>
+                    <a href="">Change Profile</a>
+                    <a href="">Logout</a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+</html>
